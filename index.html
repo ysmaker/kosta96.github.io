@@ -2,26 +2,40 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
     <title>Todolist</title>
    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">-->
-   <link rel="stylesheet" type="text/css" href="todolist.css">
-  </head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type='text/javascript' src="js/jquery-2.2.0.min.js"></script>
+    <script type='text/javascript'src='js/script.js'></script>  
+    </head>
   
   <body>
    <div class="block" align="center"> 
     <h1>Todolist</h1>
- 
-  
     <input id="new-todo" type="text" placeholder="What needs to be done?">
-    </div>
+    <span id="add">Add!</span>
+
+ 
+ <ul id="lal">
+
+ </ul>
+   <br>
+   <span id="clear">
+   Clear
+   </span>
+   </div>
+
 <br>
     <div class="instruct">
     <p> Double-click to edit a todo </p>
     </div>
 <br>
-    <div class="credits">
+    <footer class="credits">
     <p> Rewritten by Kosta </p>
-    </div>
+    </footer>
 
   </body>
+
 </html>
