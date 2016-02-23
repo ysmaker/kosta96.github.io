@@ -18,7 +18,7 @@
     margin-top:-25px;
     margin-left:auto;
     margin-right:auto;
-    width:300px;
+    width:350px;
     border: 1px;
     padding: 10px;
    }
@@ -97,17 +97,17 @@ label, li{
   background: mediumspringgreen;
   }
 
- #clear
+ #clearAll
   {
     display: inline-block;
     cursor: default;
     height: 20px;
     width: 70px;
-    background-color: #000000;
+    background-color: #ffffff;
     font-family: arial;
     font-weight: bold;
-    color: white;
+    color: green;
     border-radius: 5px;
     text-align: center;
-    margin-left: 172px;
+    margin-left: 50%;
   }
