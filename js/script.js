@@ -12,13 +12,26 @@ function addListItem() {
 	}
 };
 
+/*function clearChecked(){
+	$('input').remove(input:checked);
+}*/
+
 function clearAll() {
 	$('li').remove();
 }
+   
+  
 
 $(document).ready(function () {
     $('#add').on('click', addListItem);
     $("#clearAll").on('click', clearAll);
+ 	 input.focus;
+ 	 input.keypress(function (e) {
+                if (e.which == 13) {
+                    addListItem();
+                }
+            });
+   // $('#clearChecked').on('click',clearChecked);
  });
 
 
