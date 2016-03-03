@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,32 +11,36 @@
    </head>
   
    <body>
+   <h1 id="header">Todolist</h1>
    <div class="block" align="center"> 
-    <h1>Todolist</h1>
+    
     <input id="new-todo" type="text" placeholder="What needs to be done?">
-    <span id="add">Add!</span>
+    <button id="add" class="btn btn-primary" type="button">Добавить</button>
+
 
  
- <ul id="lal">
+ <ul class="lal">
+
 
  </ul>
    <br><center>
-   <span id="clearAll">
-   Clear All
+
+   <span id="clearAll" class="btn btn-success">
+   Очистить список
    </span>
-   <span id="clearChecked">
-   Clear Checked
+   <span id="clearChecked" class="btn btn-success">
+   Удалить выделенное
    </span>
    </center>
    </div>
 
 <br>
     <div class="instruct">
-    <p> Double-click to edit a todo </p>
+    <p  class="text-info"> Двойной щелчок для редактирования </p>
     </div>
 <br>
     <footer class="credits">
-    <p> Rewritten by Kosta </p>
+    <p  class="text-info" > Rewritten by Kosta </p>
     </footer>
 
   </body>

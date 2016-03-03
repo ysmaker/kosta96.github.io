@@ -1,3 +1,5 @@
+var countLi = $('ul.list li').size();
+
 function addListItem() {
 	var text = $('#new-todo').val();
 	if (text==="")
@@ -6,32 +8,37 @@ function addListItem() {
 	} 
 	else 
 	{
-		$('ul').append('<li><input type=checkbox><label contenteditable="true">' + text + '</label></li>');
-
+		countLi+=1;
+		$('ul').append('<li class='+ countLi +'><input class='+ countLi +' type=checkbox><label contenteditable="true">' + text + '</label></li>');
 		$('#new-todo').val('');
 	}
 };
 
-/*function clearChecked(){
-	$('input').remove(input:checked);
-}*/
-
 function clearAll() {
 	$('li').remove();
+	countLi=0;
 }
-   
-  
+/*
+function clear5() {
+	$('li.'+5).remove();
+	countLi-1;
+}
+*/
+function clearChecked() {
+	for (i = 1; i < countLi; i++) 
+	{
+		if ($("input." + i + ":checkbox").prop("checked")==true) {
+			$("li").filter("."+i).remove();
+		}
+	}
+}
 
 $(document).ready(function () {
     $('#add').on('click', addListItem);
     $("#clearAll").on('click', clearAll);
- 	 input.focus;
- 	 input.keypress(function (e) {
-                if (e.which == 13) {
-                    addListItem();
-                }
-            });
-   // $('#clearChecked').on('click',clearChecked);
- });
+ 	$("#clearChecked").on('click',clearChecked);
+    });
+//$("#clear5").on('click',clear5);
+
 
 
