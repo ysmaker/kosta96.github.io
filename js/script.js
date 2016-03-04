@@ -8,9 +8,10 @@ function addListItem() {
 	} 
 	else 
 	{
-		countLi+=1;
+		
 		$('ul').append('<li class='+ countLi +'><input class='+ countLi +' type=checkbox><label contenteditable="true">' + text + '</label></li>');
 		$('#new-todo').val('');
+		countLi+=1;
 	}
 };
 
@@ -25,20 +26,37 @@ function clear5() {
 }
 */
 function clearChecked() {
-	for (i = 1; i < countLi; i++) 
+	 
+	for (i = 0; i < countLi; i++) 
 	{
 		if ($("input." + i + ":checkbox").prop("checked")==true) {
 			$("li").filter("."+i).remove();
 		}
 	}
+	
+
 }
 
+
 $(document).ready(function () {
+	
+	 $('input').on('keypress',(function (e) {
+                if (e.which == 13) {
+                    addListItem();
+                }
+            })
+     );
+
     $('#add').on('click', addListItem);
+    
     $("#clearAll").on('click', clearAll);
+ 	
  	$("#clearChecked").on('click',clearChecked);
+ 	
+// 	$("#selectALl").on('click',selectAll);
     });
 //$("#clear5").on('click',clear5);
+
 
 
 
