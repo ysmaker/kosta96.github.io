@@ -19,12 +19,8 @@ function clearAll() {
 	$('li').remove();
 	countLi=0;
 }
-/*
-function clear5() {
-	$('li.'+5).remove();
-	countLi-1;
-}
-*/
+
+
 function clearChecked() {
 	 
 	for (i = 0; i < countLi; i++) 
@@ -37,6 +33,9 @@ function clearChecked() {
 
 }
 
+function selectAll() {
+$(':checkbox').attr('checked',true);
+}
 
 $(document).ready(function () {
 	
@@ -53,9 +52,9 @@ $(document).ready(function () {
  	
  	$("#clearChecked").on('click',clearChecked);
  	
-// 	$("#selectALl").on('click',selectAll);
+	$("#selectAll").on('click',selectAll);
     });
-//$("#clear5").on('click',clear5);
+
 
 
 
