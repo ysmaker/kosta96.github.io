@@ -1,4 +1,3 @@
-var countLi = $('ul.list li').size();
 function addListItem() {
 //	if(typeof(Storage) !== "undefined") {
 	var text = $('#new-todo').val();
@@ -8,22 +7,16 @@ function addListItem() {
 	} 
 	else 
 	{
-		$('ul').prepend('<li class='+ countLi +'><input class='+ countLi +' type=checkbox><label class="todos" contenteditable="true">' + text + '</label></li>');
+		$('ul').prepend('<li class='+ countLi +'><input class='+ countLi +' type=checkbox><label contenteditable="true">' + text + '</label></li>');
 		$('#new-todo').val('');
 		countLi+=1;
 	}
-		var todos = $('.todos').html();
-   		localStorage.setItem('todos', todos);
-   		return false;
-	
 	/* var todos = $('.lal').html();
         localStorage.setItem('lal', todos);
 	} else {
     // No Web Storage support..
 	}*/
 };
-
-
 
 function clearAll() {
 	$('li').remove();
@@ -48,7 +41,7 @@ function selectAll() {
 }
 
 $(document).ready(function () {
-	
+	var countLi = $('ul.list li').size();
 	$('input').on('keypress',(function (e) {
                 if (e.which == 13) {
                     addListItem();
@@ -59,16 +52,11 @@ $(document).ready(function () {
     $("#clearAll").on('click', clearAll);
  	$("#clearChecked").on('click',clearChecked);
 	$("#selectAll").on('click',selectAll);
-
-
 	/*if (localStorage.getItem('todos')) {
         $('#todos').html(localStorage.getItem('todos'));
     }*/
 });
 
-if(localStorage.getItem('todos')) {
-	$('li').html(localStorage.getItem('todos'));
-	}	
 
 
 
