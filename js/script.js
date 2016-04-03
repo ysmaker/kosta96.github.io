@@ -1,3 +1,4 @@
+var countLi = $('ul.list li').size();
 function addListItem() {
 //	if(typeof(Storage) !== "undefined") {
 	var text = $('#new-todo').val();
